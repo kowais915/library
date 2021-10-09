@@ -63,7 +63,8 @@ form.addEventListener('submit', (e)=>{
 
     const tit = form.title.value.trim();
     console.log(title);
-    title.innerHTML +=  `<div> ${tit} </div>`
+    title.innerHTML +=  `<div> ${tit} </div>
+    <div><span class="btn btn-danger">delete</span></div>`
 
     const aut = form.author.value.trim();
     console.log(author);
