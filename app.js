@@ -1,6 +1,9 @@
 // refrences
 
 const title = document.getElementById("title");
+const author = document.getElementById("author");
+const read = document.getElementById("read");
+const form = document.querySelector('form');
 
 
 // book array
@@ -35,6 +38,11 @@ const addBook = ()=>{
 
 // addBook();
 
+
+
+
+
+
 // Looping through books
 
 const loopBook = ()=>{
@@ -47,4 +55,29 @@ const loopBook = ()=>{
 }
 
 // loopBook();
+
+// form
+
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    const tit = form.title.value.trim();
+    console.log(title);
+    title.innerHTML +=  `<div> ${tit} </div>`
+
+    const aut = form.author.value.trim();
+    console.log(author);
+    author.innerHTML +=  `<div> ${aut} </div>`
+
+
+    const stat = form.status.value.trim();
+    console.log(stat);
+    read.innerHTML +=  `<div> ${stat} </div>`
+
+
+
+
+
+})
+
 
